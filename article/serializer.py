@@ -10,6 +10,12 @@ class ArticleSerializer(serializers.ModelSerializer):
         depth = 1
 
 
+class ArticleRetrieveSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Article
+        fields = ('__all__')
+
+
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Article
